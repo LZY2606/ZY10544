@@ -1,0 +1,18 @@
+{
+  "version": "2.3",
+  "assemblyVersion": "1.0",
+  "versionHeightOffset": 0,
+  "publicReleaseRefSpec": [
+    "^refs/heads/main$",
+    "^refs/tags/v\\d+\\.\\d+"
+  ],
+  "nugetPackageVersion": {
+    "semVer": 2
+  },
+  "cloudBuild": {
+    "buildNumber": {
+      "enabled": true,
+      "setVersionVariables": true
+    }
+  }
+}

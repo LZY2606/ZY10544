@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net462;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputType>exe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+    <DefineConstants>$(DefineConstants);SOCKET_STREAM_BUFFERS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <!--<DefineConstants>$(DefineConstants);VERBOSE</DefineConstants>-->
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Pipelines" Version="10.0.5" />
+    <ProjectReference Include="..\src\Pipelines.Sockets.Unofficial\Pipelines.Sockets.Unofficial.csproj" />
+    <PackageReference Include="System.Reflection.Metadata" Version="10.0.5" />
+  </ItemGroup>
+</Project>
